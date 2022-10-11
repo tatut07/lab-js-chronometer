@@ -24,11 +24,19 @@ class Chronometer {
   }
 
   computeTwoDigitNumber(value) {
-    // ... your code goes here
+    const convString = value.toString();
+    if (convString.length < 2) {
+      return "0" + convString;
+    } else {
+      return convString;
+    }
   }
 
   stop() {
-    // ... your code goes here
+    clearInterval();
+    if (this.currentTime) {
+      clearInterval(this.intervalId);
+    }
   }
 
   reset() {

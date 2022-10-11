@@ -5,7 +5,7 @@ class Chronometer {
   }
 
   start(printTimeCallback) {
-    const intervalId = setInterval(() => {
+    this.intervalId = setInterval(() => {
       this.currentTime += 1;
       if (printTimeCallback) {
         printTimeCallback();
@@ -14,7 +14,8 @@ class Chronometer {
   }
 
   getMinutes() {
-    // ... your code goes here
+    const minutes = this.currentTime / 60;
+    return Math.floor(minutes);
   }
 
   getSeconds() {

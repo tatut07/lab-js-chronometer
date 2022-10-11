@@ -19,7 +19,8 @@ class Chronometer {
   }
 
   getSeconds() {
-    // ... your code goes here
+    const seconds = this.currentTime % 60;
+    return Math.floor(seconds);
   }
 
   computeTwoDigitNumber(value) {

@@ -44,6 +44,10 @@ class Chronometer {
   }
 
   split() {
-    // ... your code goes here
+    const finMinutes = this.getMinutes.toString();
+    const finSeconds = this.getSeconds.toString();
+    const endMinutes = this.computeTwoDigitNumber(finMinutes);
+    const endSeconds = this.computeTwoDigitNumber(finSeconds);
+    return `${endMinutes}:${endSeconds}`;
   }
 }
